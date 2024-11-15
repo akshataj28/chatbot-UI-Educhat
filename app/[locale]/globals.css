@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 63.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .light {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 0 0% 3.9%; /* Black text */
+  
+    --muted: 0 0% 96.1%; /* Muted light background */
+    --muted-foreground: 0 0% 45.1%; /* Muted foreground */
+  
+    --popover: 0 0% 100%; /* Popover background */
+    --popover-foreground: 0 0% 3.9%; /* Popover text */
+  
+    --card: 0 0% 100%; /* Card background */
+    --card-foreground: 0 0% 3.9%; /* Card text */
+  
+    --border: 0 0% 89.8%; /* Light border */
+    --input: 0 0% 89.8%; /* Light input */
+  
+    --primary: 0 0% 9%; /* Dark primary color */
+    --primary-foreground: 0 0% 98%; /* Light text on primary */
+  
+    --secondary: 0 0% 96.1%; /* Secondary light */
+    --secondary-foreground: 0 0% 9%; /* Dark text for secondary */
+  
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+  
+    --destructive: 0 84.2% 60.2%; /* Destructive red */
+    --destructive-foreground: 0 0% 98%; /* Light text on red */
+  
+    --ring: 0 0% 63.9%;
+  
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 0 0% 14.9%;
+    --radius: 0.5rem;
+
+  }
+  
+  .beige {
+    --background: 45 20% 94%; /* Beige mode background (a light beige color) */
+    --foreground: 35 25% 15%; /* Beige mode text color (dark brown) */
+  
+    --muted: 45 30% 90%; /* A softer beige for muted elements */
+    --muted-foreground: 35 20% 25%; /* Muted text in a medium brown */
+  
+    --popover: 45 20% 94%;
+    --popover-foreground: 35 25% 15%;
+  
+    --card: 45 20% 94%;
+    --card-foreground: 35 25% 15%;
+  
+    --border: 35 20% 75%; /* Light brown for borders */
+    --input: 35 20% 75%; /* Matching the border color for inputs */
+  
+    --primary:#f4f2e3; /* Primary color for beige theme (a deeper brown) */
+    --primary-foreground: 35 25% 15%; /* Foreground color in contrast to primary */
+  
+    --secondary: #fdfbf5; /* Lighter beige for secondary elements */
+    --secondary-foreground: 35 25% 15%;
+  
+    --accent: 45 20% 90%; /* A beige for accents */
+    --accent-foreground: 35 25% 15%;
+  
+    --destructive: 0 50% 60%; /* Same destructive color */
+    --destructive-foreground: 0 0% 98%;
+  
+    --ring: 35 20% 75%; /* Light brown ring color */
+  
+    --radius: 0.5rem;
+  }
+  
+}
+@layer components {
+  .btn {
+    @apply font-semibold py-2 px-4 rounded;
+  }
+  .btn-light {
+    @apply bg-gray-300 text-gray-800 hover:bg-gray-200 w-1/6 px-4 py-2 rounded-md;
+  }
+  .btn-dark {
+    @apply bg-gray-500 text-white hover:bg-gray-600 w-1/6 px-4 py-2 rounded-md;
+  }
+  .btn-beige {
+    @apply bg-beige-700 text-gray-800 hover:bg-beige-800 w-1/6 px-4 py-2 rounded-md;
+  }
+
+  .checkbox {
+    @apply h-4 w-4 rounded;
+  }
+  .checkbox-light {
+    @apply bg-gray-200 border-gray-400 focus:ring-primary;
+  }
+  .checkbox-dark {
+    @apply bg-gray-700 border-gray-600 focus:ring-primary;
+  }
+  .checkbox-beige {
+    @apply bg-yellow-200 border-yellow-400 focus:ring-primary;
+  }
+
+  .input {
+    @apply rounded px-3 py-2 focus:outline-none;
+  }
+  .input-light {
+    @apply bg-gray-100 border-gray-300 text-gray-800 focus:ring-primary;
+  }
+  .input-dark {
+    @apply bg-gray-800 border-gray-700 text-white focus:ring-primary;
+  }
+  .input-beige {
+    @apply bg-yellow-100 border-yellow-300 text-brown-800 focus:ring-primary;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
