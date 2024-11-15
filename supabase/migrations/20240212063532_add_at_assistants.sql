@@ -1,0 +1,3 @@
+ALTER TABLE messages ADD COLUMN assistant_id UUID REFERENCES assistants(id) ON DELETE CASCADE DEFAULT NULL;
+
+
